@@ -1,9 +1,8 @@
 import React from 'react';
 
+import profileImg from '../../../assets/images/profile.png';
 import { Logo } from '../../icons';
 import { HeaderStyled, AvatarStyled } from './Header.styled';
-// @ts-ignore
-import profileImg from '../../../assets/images/profile.png';
 
 function Header() {
   return (
