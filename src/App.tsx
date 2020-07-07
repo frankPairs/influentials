@@ -2,17 +2,17 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 
 import { theme, GlobalStyle } from "./styles";
-import { Header } from "./components";
-import { AppWrapperStyled, MainStyled } from "./App.styled";
+import { Header } from "./components/layout";
+import { AppStyled, MainStyled } from "./App.styled";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <AppWrapperStyled>
+      <AppStyled>
         <Header />
         <MainStyled>Main</MainStyled>
-      </AppWrapperStyled>
+      </AppStyled>
     </ThemeProvider>
   );
 }

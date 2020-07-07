@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const AppWrapperStyled = styled.div`
+const AppStyled = styled.div`
   display: grid;
   grid-template-rows: 3.75rem auto;
   grid-template-columns: 9.375rem auto 9.375rem;
@@ -15,4 +15,4 @@ const MainStyled = styled.main`
   grid-area: main;
 `;
 
-export { AppWrapperStyled, MainStyled };
+export { AppStyled, MainStyled };

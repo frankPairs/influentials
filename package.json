@@ -24,6 +24,8 @@
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
     "eslint": "^7.4.0",
+    "file-loader": "^6.0.0",
+    "prettier": "^2.0.5",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.6",
     "webpack-bundle-analyzer": "^3.8.0",
