@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import { Logo } from "../../icons";
-import { HeaderStyled, AvatarStyled } from "./Header.styled";
+import { Logo } from '../../icons';
+import { HeaderStyled, AvatarStyled } from './Header.styled';
 // @ts-ignore
-import profileImg from "../../../assets/images/profile.png";
+import profileImg from '../../../assets/images/profile.png';
 
 function Header() {
   return (
