@@ -1,10 +1,10 @@
 import { BrandActions, BrandState, BrandActionTypes } from './types';
 
-const initialState: BrandState = {
+const brandsInitialState: BrandState = {
   data: null,
 };
 
-function brandsReducer(state: BrandState = initialState, action: BrandActions): BrandState {
+function brandsReducer(state: BrandState = brandsInitialState, action: BrandActions): BrandState {
   switch (action.type) {
     case BrandActionTypes.SET_BRAND_DATA: {
       return {
@@ -18,4 +18,4 @@ function brandsReducer(state: BrandState = initialState, action: BrandActions): 
   }
 }
 
-export { brandsReducer };
+export { brandsReducer, brandsInitialState };

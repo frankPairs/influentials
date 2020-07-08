@@ -3,12 +3,17 @@
     "outDir": "./public/",
     "noImplicitAny": true,
     "module": "es2020",
-    "target": "es2020",
+    "target": "es2019",
     "jsx": "react",
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "typeRoots": ["./src/typeDefs"],
-    "moduleResolution": "node"
-  }
+    "typeRoots": ["node_modules/@types", "./src/typeDefs"],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "strict": true,
+    "declaration": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"]
 }
