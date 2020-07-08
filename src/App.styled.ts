@@ -13,7 +13,11 @@ const AppStyled = styled.div`
 
 const MainStyled = styled.main`
   grid-area: main;
-  padding: 2.75rem ${({ theme }) => theme.app.padding};
+  padding: 2.75rem 10%;
+
+  @media only screen and (max-width: ${({ theme }) => theme.media.tablet}) {
+    padding: 1.5rem;
+  }
 `;
 
 export { AppStyled, MainStyled };

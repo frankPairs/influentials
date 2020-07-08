@@ -5,7 +5,11 @@ const HeaderStyled = styled.header`
   align-items: center;
   grid-area: header;
   box-shadow: rgba(0, 0, 0, 0.05) 0 1px 0;
-  padding: 0 ${({ theme }) => theme.app.padding};
+  padding: 0 10%;
+
+  @media only screen and (max-width: ${({ theme }) => theme.media.tablet}) {
+    padding: 1.5rem;
+  }
 `;
 
 const MenuStyled = styled.nav`
@@ -14,6 +18,12 @@ const MenuStyled = styled.nav`
   ul {
     display: flex;
     list-style: none;
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.media.tablet}) {
+    ul {
+      display: none;
+    }
   }
 `;
 

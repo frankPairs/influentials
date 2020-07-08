@@ -4,6 +4,7 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     media: {
       desktop: string;
+      desktopSmall: string;
       tablet: string;
       mobile: string;
     };
@@ -12,10 +13,6 @@ declare module 'styled-components' {
       black: string;
       primary: string;
       gray1: string;
-    };
-
-    app: {
-      padding: string;
     };
   }
 }
