@@ -1,10 +1,10 @@
 import { ChannelActions, ChannelState, ChannelActionTypes } from './types';
 
-const initialState: ChannelState = {
+const channelsInitialState: ChannelState = {
   data: null,
 };
 
-function channelsReducer(state: ChannelState = initialState, action: ChannelActions): ChannelState {
+function channelsReducer(state: ChannelState = channelsInitialState, action: ChannelActions): ChannelState {
   switch (action.type) {
     case ChannelActionTypes.SET_CHANNEL_DATA: {
       return {
@@ -18,4 +18,4 @@ function channelsReducer(state: ChannelState = initialState, action: ChannelActi
   }
 }
 
-export { channelsReducer };
+export { channelsReducer, channelsInitialState };
