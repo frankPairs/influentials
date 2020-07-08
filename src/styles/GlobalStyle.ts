@@ -19,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2em;
     margin: 0.67em 0;
   }
+  h2, h3, h4, h5 {
+    margin: 0;
+  }
   hr {
     box-sizing: content-box;
     height: 0;
