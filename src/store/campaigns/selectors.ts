@@ -10,6 +10,6 @@ const selectCampaignLoading = (state: AppState) => state.campaigns.loading;
 const selectCampaignError = (state: AppState) => state.campaigns.error;
 
 const selectCampaignDataList = (state: AppState) =>
-  Object.values(pathOr<CampaignNormalized[]>([], ['campaigns', 'data'], state));
+  Object.values(pathOr<{ [campaignId: number]: CampaignNormalized }>({}, ['campaigns', 'data'], state));
 
 export { selectCampaignData, selectCampaignLoading, selectCampaignError, selectCampaignDataList };

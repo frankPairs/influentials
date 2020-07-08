@@ -13,7 +13,7 @@ function getState(overrideState: Partial<ChannelState> | null, action: ChannelAc
   );
 }
 describe('channels reducer', () => {
-  it('should return new data after triggering setBrandData action', () => {
+  it('should set data after triggering setBrandData action', () => {
     const action = setChannelData(mockChannelsMap);
     const state = getState(null, action);
 

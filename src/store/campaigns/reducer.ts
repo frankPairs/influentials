@@ -1,12 +1,12 @@
 import { CampaignActions, CampaignState, CampaignsActionTypes } from './types';
 
-const initialState: CampaignState = {
+const campaignsInitialState: CampaignState = {
   data: null,
   error: null,
   loading: false,
 };
 
-function campaignsReducer(state: CampaignState = initialState, action: CampaignActions): CampaignState {
+function campaignsReducer(state: CampaignState = campaignsInitialState, action: CampaignActions): CampaignState {
   switch (action.type) {
     case CampaignsActionTypes.SET_CAMPAIGN_DATA: {
       return {
@@ -34,4 +34,4 @@ function campaignsReducer(state: CampaignState = initialState, action: CampaignA
   }
 }
 
-export { campaignsReducer };
+export { campaignsReducer, campaignsInitialState };

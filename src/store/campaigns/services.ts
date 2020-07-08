@@ -1,16 +1,8 @@
 import { normalize } from 'normalizr';
 
 import { api } from '../api';
-import { Brand } from '../brands';
-import { ChannelCampaign } from '../channels';
-import { GetCampaignResponse, CampaignNormalized } from './types';
+import { GetCampaignResponse, CampaignNormalized, GetCampaignsEntities } from './types';
 import { campaignsListSchema } from './normalizrSchema';
-
-interface GetCampaignsEntities {
-  brands: Brand[];
-  channels: ChannelCampaign[];
-  campaigns: CampaignNormalized[];
-}
 
 function getCampaigns() {
   return api

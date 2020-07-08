@@ -13,7 +13,7 @@ function getState(overrideState: Partial<BrandState> | null, action: BrandAction
   );
 }
 describe('brands reducer', () => {
-  it('should return new data after triggering setBrandData action', () => {
+  it('should set data after triggering setBrandData action', () => {
     const action = setBrandData(mockBrandsMap);
     const state = getState(null, action);
 

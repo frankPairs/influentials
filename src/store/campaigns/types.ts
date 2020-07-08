@@ -83,7 +83,7 @@ interface AssignmentCampaign {
 interface Application {
   isClosed: boolean;
   isApplied: boolean;
-  allowedFailReason: string;
+  allowedFailReason: string | null;
   status: string | null;
   displayStatus: string | null;
 }
@@ -95,6 +95,13 @@ interface Pagination {
   page: number;
   previousPage: number;
   totalPages: number;
+}
+
+/* Normalizr responses */
+interface GetCampaignsEntities {
+  brands: Brand[];
+  channels: ChannelCampaign[];
+  campaigns: CampaignNormalized[];
 }
 
 /* HTTP Models */
@@ -116,4 +123,5 @@ export {
   SetCampaignLoadingAction,
   SetCampaignErrorAction,
   GetCampaignResponse,
+  GetCampaignsEntities,
 };
