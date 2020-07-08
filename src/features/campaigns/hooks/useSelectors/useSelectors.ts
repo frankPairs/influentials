@@ -1,17 +1,33 @@
 import { useSelector } from 'react-redux';
 
-import { selectCampaignData, selectCampaignLoading, selectCampaignError } from '../../../../store/campaigns';
+import {
+  selectCampaignDataList,
+  selectCampaignLoading,
+  selectCampaignError,
+  CampaignNormalized,
+} from '../../../../store/campaigns';
+import { selectBrandById } from '../../../../store/brands';
+import { AppState } from '../../../../store/types';
 
-const useSelectCampaignData = () => useSelector(selectCampaignData);
+const useSelectCampaignListData = () => useSelector(selectCampaignDataList);
 
 const useSelectCampaignLoading = () => useSelector(selectCampaignLoading);
 
 const useSelectCampaignError = () => useSelector(selectCampaignError);
 
 const useSelectCampaignResponse = () => ({
-  data: useSelectCampaignData(),
+  data: useSelectCampaignListData(),
   loading: useSelectCampaignLoading(),
   error: useSelectCampaignError(),
 });
 
-export { useSelectCampaignData, useSelectCampaignError, useSelectCampaignLoading, useSelectCampaignResponse };
+const useSelectCampaignBrand = (campaign: CampaignNormalized) =>
+  useSelector((state: AppState) => selectBrandById(state, campaign.brand));
+
+export {
+  useSelectCampaignListData,
+  useSelectCampaignError,
+  useSelectCampaignLoading,
+  useSelectCampaignResponse,
+  useSelectCampaignBrand,
+};

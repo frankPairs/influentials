@@ -9,6 +9,7 @@ const media = {
 const colors = {
   black: '#000',
   primary: '#4D00FF',
+  gray1: '#999',
 };
 
 const app = {

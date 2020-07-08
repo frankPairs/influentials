@@ -1,14 +1,11 @@
 import React from 'react';
 
-import { useGetCampaigns } from '../../hooks';
+import { CampaignList } from '../../components';
 
 function CampaignsView() {
-  const response = useGetCampaigns();
-
-  console.log(response);
   return (
     <div>
-      <h1>Marketplace</h1>
+      <CampaignList />
     </div>
   );
 }
