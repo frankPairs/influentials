@@ -1,7 +1,8 @@
 import React from 'react';
 
+import { Channel } from '../../../../components/channels';
 import { CampaignNormalized } from '../../../../store/campaigns';
-import { useSelectCampaignBrand } from '../../hooks';
+import { useSelectCampaignBrand, useSelectCampaignChannels } from '../../hooks';
 import { CardStyled } from './CampaignCard.styled';
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 
 function CampaignCard({ campaign }: Props) {
   const brand = useSelectCampaignBrand(campaign);
+  const channels = useSelectCampaignChannels(campaign);
 
   return (
     <CardStyled key={campaign.id}>
@@ -24,6 +26,16 @@ function CampaignCard({ campaign }: Props) {
         <div className="brand-logo-wrapper">
           {brand && <img className="brand-logo" alt={brand.name} src={brand.image} />}
         </div>
+      </div>
+      <div className="channels-wrapper">
+        {channels.map((channelCampaign) => (
+          <Channel
+            className="channel-item"
+            key={channelCampaign.id}
+            {...channelCampaign.channel}
+            reach={channelCampaign.reach}
+          />
+        ))}
       </div>
     </CardStyled>
   );

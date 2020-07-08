@@ -7,6 +7,7 @@ import {
   CampaignNormalized,
 } from '../../../../store/campaigns';
 import { selectBrandById } from '../../../../store/brands';
+import { selectChannelsById } from '../../../../store/channels';
 import { AppState } from '../../../../store/types';
 
 const useSelectCampaignListData = () => useSelector(selectCampaignDataList);
@@ -24,10 +25,14 @@ const useSelectCampaignResponse = () => ({
 const useSelectCampaignBrand = (campaign: CampaignNormalized) =>
   useSelector((state: AppState) => selectBrandById(state, campaign.brand));
 
+const useSelectCampaignChannels = (campaign: CampaignNormalized) =>
+  useSelector((state: AppState) => selectChannelsById(state, campaign.channels));
+
 export {
   useSelectCampaignListData,
   useSelectCampaignError,
   useSelectCampaignLoading,
   useSelectCampaignResponse,
   useSelectCampaignBrand,
+  useSelectCampaignChannels,
 };

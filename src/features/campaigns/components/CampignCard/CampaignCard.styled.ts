@@ -5,8 +5,7 @@ const CardStyled = styled.li`
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  margin-right: 1.8125rem;
-  width: 22.9375rem;
+  justify-content: space-between;
 
   &::last-child {
     margin-right: 0;
@@ -23,17 +22,22 @@ const CardStyled = styled.li`
     border-radius: 1rem 1rem 0 0;
   }
 
+  .channels-wrapper,
+  .content-wrapper {
+    padding: 1.25em;
+  }
+
   .content-wrapper {
     border: 1px solid rgba(0, 0, 0, 0.05);
     align-items: flex-start;
     display: flex;
-    padding: 1.25em;
+    flex: 1;
   }
 
   .info-wrapper {
     box-sizing: border-box;
     flex: 1;
-    padding-right: 1.25em;
+    padding-right: 1.25rem;
   }
 
   .title {
@@ -58,6 +62,19 @@ const CardStyled = styled.li`
     height: auto;
     border-radius: 500%;
     box-sizing: border-box;
+  }
+
+  .channels-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .channel-item {
+    margin-right: 1.25rem;
+
+    &::last-child {
+      margin-right: 0;
+    }
   }
 `;
 
