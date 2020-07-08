@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -27,13 +28,19 @@ const MenuStyled = styled.nav`
   }
 `;
 
-const MenuItemStyled = styled.a<{ isActive: boolean }>`
+const MenuItemStyled = styled(NavLink)`
   text-decoration: none;
 
   .text {
-    color: ${({ theme: { colors }, isActive }) => (isActive ? colors.primary : colors.black)};
+    color: ${({ theme: { colors } }) => colors.black};
     font-size: 0.875em;
     padding: 23px;
+  }
+
+  &.active {
+    .text {
+      color: ${({ theme: { colors } }) => colors.primary};
+    }
   }
 `;
 

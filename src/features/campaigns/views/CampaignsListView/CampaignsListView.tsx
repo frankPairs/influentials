@@ -3,7 +3,7 @@ import React from 'react';
 import { TitleView } from '../../../../components/layout';
 import { CampaignList } from '../../components';
 
-function CampaignsView() {
+function CampaignsListView() {
   return (
     <div>
       <TitleView title="Campaigns" />
@@ -12,4 +12,4 @@ function CampaignsView() {
   );
 }
 
-export { CampaignsView };
+export { CampaignsListView };

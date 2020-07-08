@@ -1,1 +1,1 @@
-export * from './CampaignsView/CampaignsView';
+export * from './CampaignsListView/CampaignsListView';

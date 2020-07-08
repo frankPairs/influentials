@@ -8,10 +8,10 @@ interface Props {
 }
 
 const menu = [
-  { text: 'Dashboard', path: '/', isActive: false },
-  { text: 'Marketplace', path: '/marketplace', isActive: true },
-  { text: 'Campaigns', path: '/campaigns', isActive: false },
-  { text: 'Messenger', path: '/messenger', isActive: false },
+  { text: 'Dashboard', path: '/dashboard' },
+  { text: 'Marketplace', path: '/marketplace' },
+  { text: 'Campaigns', path: '/campaigns' },
+  { text: 'Messenger', path: '/messenger' },
 ];
 
 function Header({ profileImg }: Props) {
@@ -23,7 +23,7 @@ function Header({ profileImg }: Props) {
       <MenuStyled>
         <ul>
           {menu.map((item) => (
-            <MenuItemStyled key={item.path} href={item.path} isActive={item.isActive}>
+            <MenuItemStyled key={item.path} to={item.path} exact activeClassName="active">
               <li>
                 <span className="text">{item.text}</span>
               </li>
