@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Logo() {
-  //position:absolute;width:26px;height:30px
   return (
     <svg xmlns="http://www.w3.org/2000/svg" height="26" width="30" overflow="visible" display="block">
       <path d="M13 0l13 7.5v15L13 30 0 22.5v-15z" fill="hsla(258, 100%, 50%, 0.3)" />

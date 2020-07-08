@@ -35,13 +35,13 @@ npm run dev
 Run production environment:
 
 ```
-npm run start
+npm start
 ```
 
 Run test environment:
 
 ```
-npm run test
+npm test
 ```
 
 ## Authors

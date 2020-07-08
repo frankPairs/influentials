@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Loading } from '../../../../components/icons';
 import { useGetCampaigns } from '../../hooks';
 import { CampaignCard } from '../CampignCard/CampaignCard';
 import { ListStyled } from './CampaignList.styled';
@@ -8,7 +9,7 @@ function CampaignList() {
   const { loading, data: campaigns } = useGetCampaigns();
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   if (!campaigns) {
