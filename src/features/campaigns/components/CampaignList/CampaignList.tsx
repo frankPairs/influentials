@@ -8,7 +8,7 @@ function CampaignList() {
   const { loading, data: campaigns } = useGetCampaigns();
 
   if (loading) {
-    return <p>Loading....</p>;
+    return <p>Loading...</p>;
   }
 
   if (!campaigns) {

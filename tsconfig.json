@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./public/",
     "noImplicitAny": true,
-    "module": "es2020",
+    "module": "esnext",
     "target": "es2019",
     "jsx": "react",
     "allowJs": false,
@@ -12,8 +12,9 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "strict": true,
-    "declaration": true
+    "lib": ["dom", "esnext"],
+    "esModuleInterop": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.test.ts"]
+  "exclude": ["node_modules"]
 }
