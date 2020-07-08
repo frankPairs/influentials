@@ -23,9 +23,9 @@ describe('<CampaignList />', () => {
 
     mockUseGetCampaings.mockReturnValue({ loading: true, data: null });
 
-    const { getByText } = getWrapper();
+    const { getByTestId } = getWrapper();
 
-    getByText('Loading...');
+    getByTestId('loading-spinner');
   });
 
   it('should show all campaign cards', () => {

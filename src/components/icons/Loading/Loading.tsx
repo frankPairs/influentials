@@ -13,6 +13,7 @@ function Loading() {
       display="block"
       height={50}
       width={50}
+      data-testid="loading-spinner"
     >
       <path d="M25.684 82.776a40 40 0 0047.014-64.728 42 40 35.992 01-47.014 64.728" fill="#4d00ff">
         <animateTransform
